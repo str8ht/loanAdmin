@@ -1,48 +1,44 @@
-[![Build Status](https://travis-ci.org/akveo/blur-admin.svg?branch=master)](https://travis-ci.org/akveo/blur-admin)
+## Inspiration
 
-# BlurAdmin Angular admin panel front-end framework
+All three of us are 4th years at the University of Virginia. We have experienced student loan debts to varying degrees over the past 4 years, and have strong feelings about the direction this nation is taking with respect to student loans. We wanted to construct a financial hack specifically using Machine Learning, and found that loan data (not necessarily limited to students) provided an excellent avenue for showcasing ML. 
 
-Customizable admin panel framework made with :heart: by [Akveo team](http://akveo.com/). Follow us on [Twitter](https://twitter.com/akveo_inc) to get latest news about this template first!
+## What it does
 
-### Demo
-**[Mint version demo](http://akveo.com/blur-admin-mint/)**             |  **[Blur version demo](http://akveo.com/blur-admin/)**
-:-------------------------:|:-------------------------:
-![Mint version demo](http://i.imgur.com/A3TMviJ.png)  |  ![Blur version demo](http://i.imgur.com/EAoiK2O.jpg)
+The Project consists of two parts:
+(1) The theoretical models are constructed in Jupyter Notebook which perform binary classification on individual loans made out over the past year (2018) by Lending Club. This binary classification classifies a loan as either "the loan will become delinquent at some point" or "the loan will not become delinquent at any point". 
 
-## Angular 2 version
-Here you can find Angular2 based version: [ng2-admin](https://github.com/akveo/ng2-admin).
+Four Models were constructed for this purpose:
+i. k-Nearest Neighbor
+ii. Decision Tree
+iii. Random Forest
+iv. Gaussian Naive Bayes
 
-### Documentation
-Installation, customization and other useful articles: https://akveo.github.io/blur-admin/
+Models ii - iv were used in the finished hack. Based on these three models, a majority vote algorithm was used to build a robust loan delinquency classifier. 
 
-*If you have problems installing and just want to download JS and css files, you can find download links here*: http://akveo.github.io/blur-admin/articles/091-downloads/
+(2) A Node web application was constructed to visually showcase data analytics and the machine learning models. Performance metrics are shown through this application.
 
-## How can I support developers?
-- Star our GitHub repo
-- Create pull requests, submit bugs, suggest new features or documentation updates
-- Follow us on [Twitter](https://twitter.com/akveo_inc)
-- Like our page on [Facebook](https://www.facebook.com/akveo/)
+## How we built it
 
-## Can I hire you guys?
-Yes! We are available for hire. Visit [our homepage](http://akveo.com/) or simply leave us a note to contact@akveo.com. We will be happy to work with you!
+Python sklearn for the models, pandas/numpy for the data manipulation, seaborn/matplotlib for exploratory data analysis.
 
-## Features
-* Responsive layout
-* High resolution
-* Bootstrap CSS Framework
-* Sass
-* Gulp build
-* AngularJS
-* Jquery
-* Charts (amChart, Chartist, Chart.js, Morris)
-* Maps (Google, Leaflet, amMap)
-* etc
+Node.js, Angular, Chart.Js, amMap, and amChart, for the web application
 
-License
--------------
-<a href=/LICENSE.txt target="_blank">MIT</a> license.
+## Challenges we ran into
 
-### From akveo
+- Huge amounts of data (over 300MB in some cases) which made it extremely difficult to port between machines, to run in the Jupyter notebooks, and to push up to github.
 
-Enjoy!
-We're always happy to hear your feedback.
+- Javascript charts are incredibly tedious to work with, and can take a very long amount of time to look right.
+
+- A number of the ML models were predicting positive class all across the board for all training data, which resulted in a minimization of the loss function but was not useful to us. We had to retrain and tune the models so this would not happen. 
+
+## Accomplishments that we're proud of
+
+We completed an entire end-to-end machine learning project in less that 24 hours, having gotten rather good results on the models and an impressive looking front-end for demoing. 
+
+## What we learned
+
+We learned a great deal about MEAN stack development. We had initially planned to use Django for the web application, since python sklearn can easily be ported over to Django. However, we found an awesome template in Node, and decided to go with that even given the fact that we collectively had little experience with Node.
+
+## What's next for Loan Admin
+
+To be determined - given more time to work on this project it is certainly foreseeable that a very legitimate idea for a product could come out of it. 
