@@ -9,13 +9,13 @@
     'ui.router',
 
     'BlurAdmin.pages.dashboard',
-    'BlurAdmin.pages.ui',
-    'BlurAdmin.pages.components',
-    'BlurAdmin.pages.form',
-    'BlurAdmin.pages.tables',
-    'BlurAdmin.pages.charts',
+    //'BlurAdmin.pages.ui',
+    //'BlurAdmin.pages.components',
+    //'BlurAdmin.pages.form',
+    //'BlurAdmin.pages.tables',
+    'BlurAdmin.pages.models',
     'BlurAdmin.pages.maps',
-    'BlurAdmin.pages.profile',
+    //'BlurAdmin.pages.profile',
   ])
       .config(routeConfig);
 
@@ -34,16 +34,18 @@
         title: 'Sign Up',
         fixedHref: 'reg.html',
         blank: true
-      }, {
+      }
+      /*, {
         title: 'User Profile',
         stateRef: 'profile'
       }, {
         title: '404 Page',
         fixedHref: '404.html',
         blank: true
-      }]
+      }*/
+    ]
     });
-    baSidebarServiceProvider.addStaticItem({
+    /*baSidebarServiceProvider.addStaticItem({
       title: 'Menu Level 1',
       icon: 'ion-ios-more',
       subMenu: [{
@@ -57,6 +59,7 @@
         }]
       }]
     });
+    */
   }
 
 })();

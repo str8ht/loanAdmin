@@ -18,7 +18,7 @@
         center: 'title',
         right: 'month,agendaWeek,agendaDay'
       },
-      defaultDate: '2016-03-08',
+      defaultDate: '2019-03-03',
       selectable: true,
       selectHelper: true,
       select: function (start, end) {
@@ -38,24 +38,15 @@
       eventLimit: true, // allow "more" link when too many events
       events: [
         {
-          title: 'All Day Event',
-          start: '2016-03-01',
-          color: dashboardColors.silverTree
+          title: 'HooHacks 2019!!',
+          start: '2019-03-01',
+          end: '2019-03-02',
+          color: dashboardColors.gossipDark
         },
         {
-          title: 'Long Event',
-          start: '2016-03-07',
-          end: '2016-03-10',
-          color: dashboardColors.blueStone
-        },
-        {
-          title: 'Dinner',
-          start: '2016-03-14T20:00:00',
-          color: dashboardColors.surfieGreen
-        },
-        {
-          title: 'Birthday Party',
-          start: '2016-04-01T07:00:00',
+          title: 'Spring Break',
+          start: '2019-03-08',
+          end: '2019-03-17',
           color: dashboardColors.gossipDark
         }
       ]

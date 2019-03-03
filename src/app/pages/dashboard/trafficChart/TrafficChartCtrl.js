@@ -1,7 +1,7 @@
 /**
  * @author v.lugovksy
  * created on 16.12.2015
- */
+ */ 
 (function () {
   'use strict';
 
@@ -10,20 +10,13 @@
 
   /** @ngInject */
   function TrafficChartCtrl($scope, baConfig, colorHelper) {
-
       $scope.transparent = baConfig.theme.blur;
       var dashboardColors = baConfig.colors.dashboard;
       $scope.doughnutData = {
-          labels: [
-              'Other',
-              'Search engines',
-              'Referral Traffic',
-              'Direct Traffic',
-              'Ad Campaigns'
-          ],
+          labels: ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
           datasets: [
               {
-                  data: [2000, 1500, 1000, 1200, 400],
+                  data: [38011, 35861, 31018, 17072, 5962, 387, 101],
                   backgroundColor: [
                       dashboardColors.white,
                       dashboardColors.blueStone,
@@ -39,7 +32,7 @@
                       colorHelper.shade(dashboardColors.silverTree, 15),
                       colorHelper.shade(dashboardColors.gossip, 15)
                   ],
-                  percentage: [87, 22, 70, 38, 17]
+                  percentage: [0.2960081612310376, 0.27926517770924836, 0.24155063389714357, 0.13294707659720276, 0.046428682677631374, 0.0030137370339220633, 0.0007865308538142852]
               }]
       };
 

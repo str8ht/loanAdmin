@@ -1,20 +1,49 @@
-<dashboard-pie-chart></dashboard-pie-chart>
 
 <div class="row">
   <div class="col-lg-6 col-md-12 col-sm-12"
        ba-panel
-       ba-panel-title="Acquisition Channels"
+       ba-panel-title="Outgoing Loans for 2018 Q4"
        ba-panel-class="medium-panel traffic-panel">
     <traffic-chart></traffic-chart>
   </div>
   <div class="col-lg-6 col-md-12 col-sm-12"
        ba-panel
-       ba-panel-title="Users by Country"
+       ba-panel-title="2018 Q4 Loans by State"
        ba-panel-class="medium-panel">
     <dashboard-map></dashboard-map>
   </div>
 </div>
 
+<div class="row ">
+    <div class="col-lg-4 col-md-6" ng-controller="chartJs2DCtrl">
+        <div ba-panel ba-panel-title="Total Loans Amounts (USD) " ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-third-row">
+                <canvas id="radar" class="chart chart-radar" chart-series="series" chart-data="data"
+                        chart-labels="labels" chart-click="changeData">
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6" ng-controller="chartJs2DCtrl">
+        <div ba-panel ba-panel-title="Total Loans Amounts (USD)" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-third-row">
+                <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels"
+                        chart-series="series" chart-click="changeData"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-12" ng-controller="chartJs2DCtrl">
+        <div ba-panel ba-panel-title="Total Loans Amounts (USD)" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-third-row">
+                <canvas id="bar" class="chart chart-bar"
+                        chart-data="data" chart-labels="labels" chart-series="series" chart-click="changeData" chart-update="updateC">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
 <div class="row">
   <div class="col-xlg-9 col-lg-6 col-md-6 col-sm-12 col-xs-12">
     <div class="row">
@@ -38,6 +67,7 @@
     <blur-feed></blur-feed>
   </div>
 </div>
+-->
 
 <div class="row shift-up">
   <div class="col-xlg-3 col-lg-6 col-md-6 col-xs-12"

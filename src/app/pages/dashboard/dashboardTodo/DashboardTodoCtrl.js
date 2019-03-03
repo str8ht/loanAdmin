@@ -24,16 +24,16 @@
     }
 
     $scope.todoList = [
-      { text: 'Check me out' },
-      { text: 'Lorem ipsum dolor sit amet, possit denique oportere at his, etiam corpora deseruisse te pro' },
-      { text: 'Ex has semper alterum, expetenda dignissim' },
-      { text: 'Vim an eius ocurreret abhorreant, id nam aeque persius ornatus.' },
-      { text: 'Simul erroribus ad usu' },
-      { text: 'Ei cum solet appareat, ex est graeci mediocritatem' },
-      { text: 'Get in touch with akveo team' },
-      { text: 'Write email to business cat' },
-      { text: 'Have fun with blur admin' },
-      { text: 'What do you think?' },
+      { text: 'Finish Random Forest Classifier' },
+      { text: 'Provide performance metric/confusion matrix for RF' },
+      { text: 'Finish KNN model' },
+      { text: 'Provide performance metric/confusion matrix for KNN' },
+      { text: 'Train and tune the Decision-Tree' },
+      { text: 'Provide performance metric/confusion matrix for DT' },
+      { text: 'Finish Gaussian Naive Bayes Classifier' },
+      { text: 'Provide performance metric/confusion matrix for Gaussian NB' },
+      { text: 'Finish Front-End element work on the dashboard' },
+      { text: 'Integrate Models into the dashboard app' },
     ];
 
     $scope.todoList.forEach(function(item) {

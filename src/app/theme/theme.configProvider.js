@@ -53,7 +53,7 @@
 
         primaryLight: colorHelper.tint(colorScheme.primary, 30),
         infoLight: colorHelper.tint(colorScheme.info, 30),
-        successLight: colorHelper.tint(colorScheme.success, 30),
+        successLight: colorHelper.tint(colorScheme.success, 100),
         warningLight: colorHelper.tint(colorScheme.warning, 30),
         dangerLight: colorHelper.tint(colorScheme.danger, 30),
 
